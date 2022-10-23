@@ -7,7 +7,6 @@ module load workspace/scratch
 READDIR=input/nanopore
 INDIR=asm
 OUTDIR=asm/medaka
-SUFFIXCANU=_v1 # we put _v1 onend of names for now
 CPU=$SLURM_CPUS_ON_NODE
 if [ -z $CPU ]; then
 	CPU=1
@@ -30,7 +29,7 @@ do
     echo "working on strain $STRAIN"
     mkdir -p $OUTDIR/$STRAIN
     if [ ! -f $OUTDIR/$STRAIN/canu.fasta ]; then
-    	rsync -av $INDIR/canu/$STRAIN/${STRAIN}$SUFFIXCANU.contigs.fasta $OUTDIR/$STRAIN/canu.fasta
+    	rsync -av $INDIR/canu/$STRAIN/${STRAIN}.contigs.fasta $OUTDIR/$STRAIN/canu.fasta
     fi
     if [ ! -f $OUTDIR/$STRAIN/flye.fasta ]; then
     	rsync -av $INDIR/flye/$STRAIN/assembly.fasta $OUTDIR/$STRAIN/flye.fasta
