@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_graminis_Y2474.flye.medaka.sorted.fasta
+   CONTIG COUNT  =  36
+   TOTAL LENGTH  =  21213993
+            MIN  =  1178
+            MAX  =  2368735
+         MEDIAN  =  68756
+           MEAN  =  589277.58
+            L50  =  7
+            N50  =  1441957
+            L90  =  15
+            N90  =  768695
+            GC%  =  67.62

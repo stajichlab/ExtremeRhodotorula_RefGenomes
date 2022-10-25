@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_mucilaginosa_Y2510.flye.fasta
+   CONTIG COUNT  =  32
+   TOTAL LENGTH  =  20348268
+            MIN  =  2251
+            MAX  =  2170494
+         MEDIAN  =  639902
+           MEAN  =  635883.38
+            L50  =  7
+            N50  =  1286151
+            L90  =  15
+            N90  =  665268
+            GC%  =  60.45

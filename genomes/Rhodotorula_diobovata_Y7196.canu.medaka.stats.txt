@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_diobovata_Y7196.canu.medaka.sorted.fasta
+   CONTIG COUNT  =  20
+   TOTAL LENGTH  =  22317882
+            MIN  =  3048
+            MAX  =  2469360
+         MEDIAN  =  1275281
+           MEAN  =  1115894.10
+            L50  =  7
+            N50  =  1496973
+            L90  =  15
+            N90  =  861089
+            GC%  =  66.65

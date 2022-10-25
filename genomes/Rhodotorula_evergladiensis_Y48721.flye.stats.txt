@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_evergladiensis_Y48721.flye.fasta
+   CONTIG COUNT  =  29
+   TOTAL LENGTH  =  20305231
+            MIN  =  5396
+            MAX  =  2146255
+         MEDIAN  =  599158
+           MEAN  =  700180.38
+            L50  =  7
+            N50  =  1270247
+            L90  =  17
+            N90  =  516309
+            GC%  =  59.90

@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_graminis_Y2474.canu.fasta
+   CONTIG COUNT  =  38
+   TOTAL LENGTH  =  21620302
+            MIN  =  1330
+            MAX  =  1646847
+         MEDIAN  =  441237
+           MEAN  =  568955.32
+            L50  =  8
+            N50  =  1026996
+            L90  =  20
+            N90  =  413569
+            GC%  =  67.15

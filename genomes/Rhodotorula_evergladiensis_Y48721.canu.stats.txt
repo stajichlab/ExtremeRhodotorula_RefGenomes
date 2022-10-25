@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_evergladiensis_Y48721.canu.fasta
+   CONTIG COUNT  =  36
+   TOTAL LENGTH  =  20459683
+            MIN  =  3837
+            MAX  =  1517171
+         MEDIAN  =  545161
+           MEAN  =  568324.53
+            L50  =  9
+            N50  =  946928
+            L90  =  22
+            N90  =  375944
+            GC%  =  59.81

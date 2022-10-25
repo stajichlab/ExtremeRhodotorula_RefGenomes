@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_sphaerocarpa_Y7192.canu.medaka.sorted.fasta
+   CONTIG COUNT  =  45
+   TOTAL LENGTH  =  17629134
+            MIN  =  18399
+            MAX  =  1343004
+         MEDIAN  =  227724
+           MEAN  =  391758.53
+            L50  =  9
+            N50  =  752713
+            L90  =  23
+            N90  =  227724
+            GC%  =  63.36

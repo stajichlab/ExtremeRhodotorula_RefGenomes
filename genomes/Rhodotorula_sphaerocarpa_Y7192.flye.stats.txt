@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_sphaerocarpa_Y7192.flye.fasta
+   CONTIG COUNT  =  26
+   TOTAL LENGTH  =  17552925
+            MIN  =  4011
+            MAX  =  2196501
+         MEDIAN  =  655052
+           MEAN  =  675112.50
+            L50  =  7
+            N50  =  1076029
+            L90  =  16
+            N90  =  426843
+            GC%  =  63.44

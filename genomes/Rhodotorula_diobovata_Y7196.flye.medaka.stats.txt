@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_diobovata_Y7196.flye.medaka.sorted.fasta
+   CONTIG COUNT  =  47
+   TOTAL LENGTH  =  22143812
+            MIN  =  572
+            MAX  =  2455819
+         MEDIAN  =  13508
+           MEAN  =  471144.94
+            L50  =  7
+            N50  =  1445797
+            L90  =  16
+            N90  =  747921
+            GC%  =  66.75
