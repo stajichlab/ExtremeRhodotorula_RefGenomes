@@ -13,34 +13,36 @@ cat $SAMPLES | while read STRAIN NANOPORE ILLUMINA
 do
     rsync -a $INDIR/canu/$STRAIN/$STRAIN.contigs.fasta $OUTDIR/$STRAIN.canu.fasta
     rsync -a $INDIR/flye/$STRAIN/assembly.fasta $OUTDIR/$STRAIN.flye.fasta
-    rsync -a $INDIR/NECAT/$STRAIN/$STRAIN/6-bridge_contigs/polished_contigs.fasta $OUTDIR/$STRAIN.necat.fasta
+    if [ -d $INDIR/NECAT/$STRAIN/$STRAIN/6-bridge_contigs ]; then
+	rsync -a $INDIR/NECAT/$STRAIN/$STRAIN/6-bridge_contigs/polished_contigs.fasta $OUTDIR/$STRAIN.necat.fasta
+    fi
+
     for type in canu flye 
     do
-    	rsync -a $INDIR/medaka/$STRAIN/$type.polished.fasta $OUTDIR/$STRAIN.${type}.medaka.fasta
-	rsync -a $INDIR/pilon/$STRAIN/$type.pilon.fasta $OUTDIR/$STRAIN.$type.pilon.fasta 
-	if [[ -s $OUTDIR/$STRAIN.$type.fasta ]]; then
-	    if [[ ! -f $OUTDIR/$STRAIN.$type.stats.txt || $OUTDIR/$STRAIN.$type.fasta -nt $OUTDIR/$STRAIN.$type.stats.txt ]]; then
-		AAFTF assess -i $OUTDIR/$STRAIN.$type.fasta -r $OUTDIR/$STRAIN.$type.stats.txt
+	if [ -f  $INDIR/pilon/$STRAIN/$type.pilon.fasta ];  then
+		AAFTF sort -i $INDIR/pilon/$STRAIN/$type.pilon.fasta -o $OUTDIR/$STRAIN.$type.pilon.fasta
+		AAFTF assess -i OUTDIR/$STRAIN.$type.pilon.sorted.fasta -r $OUTDIR/$STRAIN.$type.pilon.stats.txt
+	fi
+	STATS=$OUTDIR/$STRAIN.$type.stats.txt
+	QUERY=$OUTDIR/$STRAIN.$type.fasta
+	if [[ -s $QUERY ]]; then
+	    if [[ ! -s $STATS || $QUERY -nt $STATS ]]; then
+		AAFTF assess -i $QUERY -r $STATS
 	    fi
 	fi
 	# copy medka
 	polishtype=medaka
-	rsync -a $INDIR/$polishtype/$STRAIN/$type.polished.fasta $OUTDIR/$STRAIN.$type.$polishtype.fasta
-		
-	# copy pilon
-	polishtype=pilon
-	if [[ ! -f $OUTDIR/$STRAIN.$type.$polishtype.fasta || $INDIR/$polishtype/$STRAIN/$type.$polishtype.fasta -nt $OUTDIR/$STRAIN.$type.$polishtype.fasta ]]; then
-	    AAFTF sort -i $INDIR/$polishtype/$STRAIN/$type.$polishtype.fasta -o $OUTDIR/$STRAIN.$type.$polishtype.fasta
-	fi
-	
-	for polishtype in medaka pilon
-	do
-	    if [[ -s $OUTDIR/$STRAIN.${type}.$polishtype.fasta ]]; then
-		if [[ ! -f $OUTDIR/$STRAIN.$type.$polishtype.stats.txt || $OUTDIR/$STRAIN.$type.$polishtype.fasta -nt $OUTDIR/$STRAIN.$type.$polishtype.stats.txt ]]; then
-                    AAFTF assess -i $OUTDIR/$STRAIN.$type.$polishtype.fasta -r $OUTDIR/$STRAIN.$type.$polishtype.stats.txt
+	QUERY=$INDIR/$polishtype/$STRAIN/$type.polished.fasta
+	SORTED=$OUTDIR/$STRAIN.$type.$polishtype.sorted.fasta
+	STATS=$OUTDIR/$STRAIN.$type.$polishtype.stats.txt
+	if [ -f $QUERY ]; then
+		if [[ ! -s $SORTED || $QUERY -nt $SORTED ]]; then
+			AAFTF sort -i $QUERY -o $SORTED
 		fi
-	    fi
-	done
+		if [[ ! -s $STATS || $SORTED -nt $STATS ]]; then
+                	AAFTF assess -i $SORTED -r $STATS
+		fi
+	fi
     done
 done
 
