@@ -9,7 +9,7 @@ my $model = 'basidiomycota_odb10';
 my $modelpep = 'basidiomycota_odb10';
 my $BUSCO_dir = 'BUSCO';
 my $BUSCO_pep = 'BUSCO_pep';
-my $telomere_report = 'reports';
+my $telomere_report = 'telomere_reports';
 my $read_map_stat = 'mapping_report';
 my $dir = shift || 'genomes';
 my @header;
@@ -55,7 +55,7 @@ foreach my $file ( readdir(DIR) ) {
 	    open(my $fh => $telomerefile) || die $!;
 	    my %contigs_with_tel;
 	    while(<$fh>) {
-		if( /^(\S+)\s+(forward|reverse)\s+(\S+)/i ){
+		if( /^(.+)\s+(forward|reverse)\s+(\S+)/i ){
 		    $contigs_with_tel{$1}->{$2} = $3;
 		} elsif (/^Telomeres found:\s+(\d+)\s+\((\S+)\s+forward,\s+(\S+)\s+reverse\)/ ) {
 		    $stats{$stem}->{'Telomeres_Found'} = $1;
@@ -82,7 +82,7 @@ foreach my $file ( readdir(DIR) ) {
 	my $busco_file = File::Spec->catfile($BUSCO_dir,$stem, 
 					     sprintf("short_summary.specific.%s.%s.txt",$model,$stem));
 	
-   	warn"busco file is $busco_file\n";	
+				     #warn("busco file is $busco_file\n");
 	if ( -f $busco_file ) {	    
 	    open(my $fh => $busco_file) || die $!;
 	    while(<$fh>) {	 
