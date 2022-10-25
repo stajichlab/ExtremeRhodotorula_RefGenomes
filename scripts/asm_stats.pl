@@ -22,7 +22,7 @@ foreach my $file ( readdir(DIR) ) {
     next unless ( $file =~ /(\S+)(\.fasta)?\.stats.txt$/);
     #next unless ( $file =~ /(\S+)(\.fasta)?\.stats.txt$/);
     my $stem = $1;
-    $stem =~ s/\.sorted//;
+    #$stem =~ s/\.sorted//;
     #warn("$file ($dir)\n");
     open(my $fh => "$dir/$file") || die "cannot open $dir/$file: $!";
     while(<$fh>) {
@@ -166,5 +166,7 @@ foreach my $file ( readdir(DIR) ) {
 }
 print join("\t", qw(SampleID), @header), "\n";
 foreach my $sp ( sort keys %stats ) {
-    print join("\t", $sp, map { $stats{$sp}->{$_} || 'NA' } @header), "\n";
+    my $oname = $sp;
+    $oname =~ s/\.sorted//;
+    print join("\t", $oname, map { $stats{$sp}->{$_} || 'NA' } @header), "\n";
 }
