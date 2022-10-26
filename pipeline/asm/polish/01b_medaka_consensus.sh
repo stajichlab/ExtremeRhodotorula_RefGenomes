@@ -23,14 +23,14 @@ fi
 IFS=,
 SAMPLES=samples.csv
 
-sed -n ${N}p $SAMPLES | while read STRAIN NANOPORE SUBPHYLUM PHYLUM
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
     for type in canu flye
     do
-	DRAFT=$OUTDIR/$STRAIN/$type.fasta
-	HDF=$OUTDIR/$STRAIN/$type.hdf
-	POLISHED=$OUTDIR/$STRAIN/$type.polished.fasta
-	BAM=$OUTDIR/$STRAIN/$type.calls_to_draft.bam
+	DRAFT=$OUTDIR/$BASE/$type.fasta
+	HDF=$OUTDIR/$BASE/$type.hdf
+	POLISHED=$OUTDIR/$BASE/$type.polished.fasta
+	BAM=$OUTDIR/$BASE/$type.calls_to_draft.bam
 	if [ ! -s $HDF ]; then
 	    time medaka consensus $BAM $HDF --model $MODEL --threads $CPU
 	fi

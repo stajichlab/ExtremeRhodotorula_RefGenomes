@@ -24,15 +24,15 @@ mkdir -p $OUTDIR
 IFS=,
 SAMPLES=samples.csv
 
-sed -n ${N}p $SAMPLES | while read STRAIN NANOPORE SUBPHYLUM PHYLUM
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
     echo "working on strain $STRAIN"
-    mkdir -p $OUTDIR/$STRAIN
-    if [ ! -f $OUTDIR/$STRAIN/canu.fasta ]; then
-    	rsync -av $INDIR/canu/$STRAIN/${STRAIN}.contigs.fasta $OUTDIR/$STRAIN/canu.fasta
+    mkdir -p $OUTDIR/$BASE
+    if [ ! -f $OUTDIR/$BASE/canu.fasta ]; then
+    	rsync -av $INDIR/canu/$BASE/${BASE}.contigs.fasta $OUTDIR/$BASE/canu.fasta
     fi
-    if [ ! -f $OUTDIR/$STRAIN/flye.fasta ]; then
-    	rsync -av $INDIR/flye/$STRAIN/assembly.fasta $OUTDIR/$STRAIN/flye.fasta
+    if [ ! -f $OUTDIR/$BASE/flye.fasta ]; then
+    	rsync -av $INDIR/flye/$BASE/assembly.fasta $OUTDIR/$BASE/flye.fasta
     fi
 
     READS=$READDIR/$NANOPORE
@@ -41,9 +41,9 @@ do
 	DRAFT=$OUTDIR/$STRAIN/$type.fasta
 	BAM=$OUTDIR/$STRAIN/$type.calls_to_draft.bam
 	if [[ ! -f $BAM ]]; then
-	    mini_align -i ${READS}.fq.gz -r $DRAFT -m -p $SCRATCH/calls_to_draft -t $CPU
+	    mini_align -i ${READS} -r $DRAFT -m -p $SCRATCH/calls_to_draft -t $CPU
 	    rsync -av $SCRATCH/calls_to_draft.bam $BAM
 	    rsync -av $SCRATCH/calls_to_draft.bam.bai $BAM.bai
 	fi
-    done  
+    done
 done
