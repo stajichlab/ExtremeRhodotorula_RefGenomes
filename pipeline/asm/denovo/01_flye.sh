@@ -23,7 +23,7 @@ mkdir -p $OUT
 IFS=,
 SAMPLES=samples.csv
 
-sed -n ${N}p $SAMPLES | while read STRAIN NANOPORE SUBPHYLUM PHYLUM
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-	flye --nano-hq $IN/$NANOPORE.fq.gz --out-dir $OUT/$STRAIN --threads $CPU --scaffold
+    flye --nano-hq $IN/$NANOPORE --out-dir $OUT/$BASE --threads $CPU --scaffold
 done

@@ -8,6 +8,7 @@ if [ -z $N ]; then
     N=$1
     if [ -z $N ]; then
 	echo "no value for SLURM ARRAY - specify with -a or cmdline"
+	exit
     fi
 fi
 
@@ -15,7 +16,7 @@ mkdir -p $OUT
 IFS=,
 SAMPLES=samples.csv
 
-sed -n ${N}p $SAMPLES | while read STRAIN NANOPORE SUBPHYLUM PHYLUM
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-	canu -p ${STRAIN} -d $OUT/${STRAIN} genomeSize=20m -nanopore-raw $IN/$NANOPORE.fq.gz
+    canu -p ${BASE} -d $OUT/${BASE} genomeSize=20m -nanopore-raw $IN/$NANOPORE
 done
