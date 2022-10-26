@@ -24,18 +24,18 @@ SAMPLES=samples.csv
 mkdir -p $OUTDIR
 
 IFS=, # set the delimiter to be ,
-IFS=, # set the delimiter to be ,
-tail -n +2 $SAMPLES | sed -n ${N}p | while read ID BASE SPECIES STRAIN LOCUSTAG TYPESTRAIN
+
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
     
-    LEFT=$(realpath $INDIR/${BASE}_R1.fastq.gz)
-    RIGHT=$(realpath $INDIR/${BASE}_R2.fastq.gz)
+    LEFT=$(realpath $INDIR/illumina/${ILLUMINA}_R1_001.fastq.gz)
+    RIGHT=$(realpath $INDIR/illumina/${ILLUMINA}_R2_001.fastq.gz)
     
     echo "$LEFT $RIGHT"
     for type in AAFTF
     do
-	SORTED=$(realpath $ASM/${ID}.AAFTF.fasta)
-	REPORTOUT=${ID}.${type}
+	SORTED=$(realpath $ASM/${BASE}.AAFTF.fasta)
+	REPORTOUT=${BASE}.${type}
 	if [ -s $SORTED ]; then
 	    pushd $SCRATCH
 	    if [ ! -s $OUTDIR/${REPORTOUT}.bbmap_covstats.txt ]; then
