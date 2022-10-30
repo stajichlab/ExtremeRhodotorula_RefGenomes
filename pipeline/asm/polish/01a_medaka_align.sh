@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH -p short -N 1 -n 64 --mem 128gb --out logs/medaka.%a.log -a 1-4
+#SBATCH -p short -N 1 -n 64 --mem 128gb --out logs/medaka.%a.log -a 1-5
 
 module load medaka/1.6
 module load workspace/scratch
@@ -26,7 +26,7 @@ SAMPLES=samples.csv
 
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-    echo "working on strain $STRAIN"
+    echo "working on strain $BASE"
     mkdir -p $OUTDIR/$BASE
     if [ ! -f $OUTDIR/$BASE/canu.fasta ]; then
     	rsync -av $INDIR/canu/$BASE/${BASE}.contigs.fasta $OUTDIR/$BASE/canu.fasta
@@ -38,8 +38,8 @@ do
     READS=$READDIR/$NANOPORE
     for type in canu flye
     do
-	DRAFT=$OUTDIR/$STRAIN/$type.fasta
-	BAM=$OUTDIR/$STRAIN/$type.calls_to_draft.bam
+	DRAFT=$OUTDIR/$BASE/$type.fasta
+	BAM=$OUTDIR/$BASE/$type.calls_to_draft.bam
 	if [[ ! -f $BAM ]]; then
 	    mini_align -i ${READS} -r $DRAFT -m -p $SCRATCH/calls_to_draft -t $CPU
 	    rsync -av $SCRATCH/calls_to_draft.bam $BAM
