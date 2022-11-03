@@ -2,9 +2,7 @@
 #SBATCH -p short -N 1 -n 2 --mem 4gb --out logs/stats.log
 
 module load AAFTF
-
-IFS=,
-SAMPLES=samples.csv
+pushd Public_genomes
 OUTDIR=genomes
 for file in $(ls $OUTDIR/*.fasta)
 do
