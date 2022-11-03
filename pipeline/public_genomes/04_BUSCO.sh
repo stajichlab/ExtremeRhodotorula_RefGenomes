@@ -1,6 +1,7 @@
 #!/bin/bash -l
-#SBATCH --nodes 1 -c 16 --mem 16G -p short --out logs/busco.%a.log -J busco -a 1
+#SBATCH --nodes 1 -c 16 --mem 16G -p short --out Public_genomes/logs/busco.%a.log -J busco -a 1
 
+pushd Public_genomes
 # for augustus training
 # set to a local dir to avoid permission issues and pollution in global
 module unload miniconda3
