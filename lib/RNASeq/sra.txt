@@ -1,0 +1,13 @@
+Rhodotorula mucilaginosa,SRR12566559
+Rhodotorula mucilaginosa,SRR11625202
+Rhodotorula mucilaginosa,SRR11625203
+Rhodotorula mucilaginosa,SRR11625204
+Rhodotorula mucilaginosa,SRR11625205
+Rhodotorula mucilaginosa,SRR10662855
+Rhodotorula mucilaginosa,SRR10662856
+Rhodotorula mucilaginosa,SRR10525675
+Rhodotorula mucilaginosa,SRR10525676
+Rhodotorula mucilaginosa,SRR10525677
+Rhodotorula mucilaginosa,SRR5363167
+Rhodotorula mucilaginosa,SRR5565087
+Rhodotorula mucilaginosa,SRR5565088
