@@ -1,4 +1,8 @@
 #!/bin/bash -l
+#SBATCH --nodes 1 -c 24 -n 1 --mem 64G -p batch --out logs/annotate.%a.log
+# note this doesn't need that much memory EXCEPT for the XML -> tsv parsing that happens when you provided an interpro XML file
+
+#!/bin/bash -l
 #SBATCH --nodes 1 --ntasks 24 --mem 128G --out logs/train.%a.log -J trainRhod --time 96:00:00
 
 MEM=128G
@@ -29,29 +33,17 @@ fi
 
 INDIR=final_genomes
 OUTDIR=annotation
-
+BUSCODB=basidiomycota_odb10
+SBTTEMPLATE=lib/sbt
 IFS=,
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
     name=$BASE
     GENOME=$INDIR/$BASE.masked.fasta
-    if [ -z $RNASEQ ]; then
-	echo "No RNASeq for training, skipping $BASE"
-    else
-	FILES=( $(ls $RNADIR/${RNASEQ}) )
-	ARGS=""
-	if [ ${#FILES[@]} == 1 ]; then
-	    ARGS="--single ${FILES[0]}"
-	elif [ ${#FILES[@]} == 1 ]; then
-	    ARGS="--left ${FILES[0]} --right ${FILES[1]}"
-	else
-	    echo "No RNASeq files found in '$RNADIR' for '$RNASEQ' - check RNASEQ column in $SAMPLES"
-	    exit
-	fi
-
-	funannotate train -i $GENOME --cpus $CPUS --memory $MEM \
-		    --species "$SPECIES" --strain $STRAIN \
-		    -o $OUTDIR/$BASE --jaccard_clip $ARGS \
-		    --max_intronlen 1000
-    fi
+    IPRSCAN=
+    funannotate annotate -i $OUTDIR/$BASE --cpus $CPUS  \
+		--species "$SPECIES" --strain $STRAIN --sbt $SBTTEMPLATE/$BASE.sbt \
+		-o $OUTDIR/$BASE --busco_db $BUSCODB --rename $LOCUS
 done
+
+

@@ -18,6 +18,8 @@ fi
 INDIR=final_genomes
 OUTDIR=annotation
 SAMPLES=samples.csv
+BUSCODB=basidiomycota_odb10
+BUSCOSEED=ustilago
 N=${SLURM_ARRAY_TASK_ID}
 
 if [ -z $N ]; then
@@ -37,10 +39,9 @@ fi
 IFS=,
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-
     GENOME=$INDIR/$BASE.masked.fasta
     funannotate predict --keep_no_stops --SeqCenter UCR -i $GENOME \
-		-o $OUTDIR/$BASE -s "$SPECIES" --strain "$STRAIN" \
-		--cpus $CPU --min_training_models 50 --max_intronlen 1000 \
-		--min_protlen 30 --tmpdir $SCRATCH
+		-o $OUTDIR/$BASE -s "$SPECIES" --strain "$STRAIN"  --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
+		--cpus $CPU --min_training_models 50 --max_intronlen 1000 --name $LOCUS \
+		--min_protlen 30 --tmpdir $SCRATCH  --busco_db $BUSCODB --busco_seed_species $BUSCOSEED
 done
