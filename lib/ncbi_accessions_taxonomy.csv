@@ -1,19 +1,19 @@
 ASM_ACCESSION,NCBI_TAXID,SPECIES_IN,STRAIN,PHYLUM,SUBPHYLUM,CLASS,SUBCLASS,ORDER,FAMILY,GENUS,SPECIES
-GCA_920104245.1,86837,Rhodotorula babjevae,CBS 7808,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula babjevae
-GCA_006352295.1,5288,Rhodotorula diobovata,UCD-FST 08-225,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula diobovata
-GCA_920103745.2,5535,Rhodotorula glutinis,CBS 20,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula glutinis
-GCF_001329695.1,29898,Rhodotorula graminis,WP1,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula graminis
-GCA_019926025.1,86836,Rhodotorula kratochvilovae,YM25235,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula kratochvilovae
-GCA_024748845.1,5537,Rhodotorula mucilaginosa,JY1105,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula mucilaginosa
-GCA_005281665.1,86838,Rhodotorula paludigena,CM33,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula paludigena
-GCA_021654155.1,2909583,Rhodotorula sp. CC01,CC01,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. CC01
-GCA_005059875.1,1965284,Rhodotorula sp. CCFEE 5036,CCFEE 5036,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. CCFEE 5036
-GCA_001914285.1,1928479,Rhodotorula sp. FNED7-22,FNED7-22,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. FNED7-22
-GCA_001541205.1,1305733,Rhodotorula sp. JG-1b,JG-1b,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. JG-1b
-GCA_023628275.1,2939542,Rhodotorula sp. M30-05A-2,M30-05A-2,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. M30-05A-2
-GCA_023628235.1,2939543,Rhodotorula sp. S30-09,S30-09,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. S30-09
-GCA_019059545.1,2834069,Rhodotorula sp. VS67,VS67,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. VS67
-GCA_009806315.1,2302991,Rhodotorula sp. ZM1,ZM1,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. ZM1
-GCA_024713535.1,86839,Rhodotorula sphaerocarpa,GDMCC 60679,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sphaerocarpa
-GCA_002922495.1,741276,Rhodotorula taiwanensis,MD1149,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula taiwanensis
-GCF_000320785.1,5286,Rhodotorula toruloides,NP11,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula toruloides
+GCA_920104245.1_Hybrid_genome_assembly,86837,Rhodotorula babjevae,CBS 7808,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula babjevae
+GCA_006352295.1_UMAN_Rdio_1.0,5288,Rhodotorula diobovata,UCD-FST 08-225,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula diobovata
+GCA_920103745.2_Hybrid_genome_assembly_-_glutinis_CBS_20_v02,5535,Rhodotorula glutinis,CBS 20,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula glutinis
+GCF_001329695.1_Rhoba1_1,29898,Rhodotorula graminis,WP1,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula graminis
+GCA_019926025.1_ASM1992602v1,86836,Rhodotorula kratochvilovae,YM25235,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula kratochvilovae
+GCA_024748845.1_ASM2474884v1,5537,Rhodotorula mucilaginosa,JY1105,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula mucilaginosa
+GCA_005281665.1_ASM528166v1,86838,Rhodotorula paludigena,CM33,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula paludigena
+GCA_021654155.1_ASM2165415v1,2909583,Rhodotorula sp. CC01,CC01,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. CC01
+GCA_005059875.1_ASM505987v1,1965284,Rhodotorula sp. CCFEE 5036,CCFEE 5036,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. CCFEE 5036
+GCA_001914285.1_FNED7-bin-22,1928479,Rhodotorula sp. FNED7-22,FNED7-22,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. FNED7-22
+GCA_001541205.1_Rhosp1,1305733,Rhodotorula sp. JG-1b,JG-1b,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. JG-1b
+GCA_023628275.1_ASM2362827v1,2939542,Rhodotorula sp. M30-05A-2,M30-05A-2,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. M30-05A-2
+GCA_023628235.1_ASM2362823v1,2939543,Rhodotorula sp. S30-09,S30-09,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. S30-09
+GCA_019059545.1_ASM1905954v1,2834069,Rhodotorula sp. VS67,VS67,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. VS67
+GCA_009806315.1_ASM980631v1,2302991,Rhodotorula sp. ZM1,ZM1,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sp. ZM1
+GCA_024713535.1_ASM2471353v1,86839,Rhodotorula sphaerocarpa,GDMCC 60679,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula sphaerocarpa
+GCA_002922495.1_ASM292249v1,741276,Rhodotorula taiwanensis,MD1149,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula taiwanensis
+GCF_000320785.1_RHOziaDV1.0,5286,Rhodotorula toruloides,NP11,Basidiomycota,,Microbotryomycetes,,Sporidiobolales,Sporidiobolaceae,Rhodotorula,Rhodotorula toruloides
