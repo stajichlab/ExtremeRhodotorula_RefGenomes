@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_mucilaginosa.fasta
+   CONTIG COUNT  =  30
+   TOTAL LENGTH  =  20357829
+            MIN  =  25026
+            MAX  =  1636503
+         MEDIAN  =  660442
+           MEAN  =  678594.30
+            L50  =  8
+            N50  =  1136838
+            L90  =  17
+            N90  =  504538
+            GC%  =  59.88

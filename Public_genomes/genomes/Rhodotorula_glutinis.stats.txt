@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_glutinis.fasta
+   CONTIG COUNT  =  32
+   TOTAL LENGTH  =  22884177
+            MIN  =  10137
+            MAX  =  1666309
+         MEDIAN  =  913408
+           MEAN  =  715130.53
+            L50  =  9
+            N50  =  1088897
+            L90  =  18
+            N90  =  759164
+            GC%  =  67.46

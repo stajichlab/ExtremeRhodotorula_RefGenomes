@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_sp._FNED7-22.fasta
+   CONTIG COUNT  =  2892
+   TOTAL LENGTH  =  16339983
+            MIN  =  2500
+            MAX  =  165144
+         MEDIAN  =  4037
+           MEAN  =  5650.06
+            L50  =  700
+            N50  =  5929
+            L90  =  2291
+            N90  =  2987
+            GC%  =  49.38

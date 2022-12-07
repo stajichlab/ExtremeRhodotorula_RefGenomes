@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_sp._CC01.fasta
+   CONTIG COUNT  =  140
+   TOTAL LENGTH  =  19925548
+            MIN  =  2044
+            MAX  =  955711
+         MEDIAN  =  69320
+           MEAN  =  142325.34
+            L50  =  18
+            N50  =  347364
+            L90  =  63
+            N90  =  87924
+            GC%  =  60.03

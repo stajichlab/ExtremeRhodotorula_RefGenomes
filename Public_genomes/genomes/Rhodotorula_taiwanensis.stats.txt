@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_taiwanensis.fasta
+   CONTIG COUNT  =  181
+   TOTAL LENGTH  =  19606691
+            MIN  =  1021
+            MAX  =  946164
+         MEDIAN  =  21671
+           MEAN  =  108324.26
+            L50  =  17
+            N50  =  388693
+            L90  =  60
+            N90  =  75810
+            GC%  =  61.60

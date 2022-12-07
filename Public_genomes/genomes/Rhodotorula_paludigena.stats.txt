@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_paludigena.fasta
+   CONTIG COUNT  =  78
+   TOTAL LENGTH  =  20655447
+            MIN  =  20441
+            MAX  =  1647824
+         MEDIAN  =  167523
+           MEAN  =  264813.42
+            L50  =  15
+            N50  =  384082
+            L90  =  50
+            N90  =  131895
+            GC%  =  64.30

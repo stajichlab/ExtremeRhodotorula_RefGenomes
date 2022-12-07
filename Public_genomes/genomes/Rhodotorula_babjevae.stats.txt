@@ -1,0 +1,12 @@
+Assembly statistics for: genomes/Rhodotorula_babjevae.fasta
+   CONTIG COUNT  =  27
+   TOTAL LENGTH  =  21862387
+            MIN  =  8677
+            MAX  =  2415752
+         MEDIAN  =  644441
+           MEAN  =  809718.04
+            L50  =  8
+            N50  =  1067634
+            L90  =  19
+            N90  =  429397
+            GC%  =  68.23
