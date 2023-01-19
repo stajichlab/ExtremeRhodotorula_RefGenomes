@@ -1,9 +1,9 @@
 NAME,SPECIES,STRAIN,NANOPORE,ILLUMINA,SUBPHYLUM,PHYLUM,LOCUS,RNASEQ
 Rhodotorula_evergladiensis_Y48721,Rhodotorula evergladiensis,NRRL Y-48721,Rhodotorula_evergladiensis_Y48721.fq.gz,,Pucciniomycotina,Basidiomycota,OM443,
-Rhodotorula_graminis_Y2474,Rhodotorula graminis,NRRL Y-2474,Rhodotorula_graminis_Y2474.fq.gz,,Pucciniomycotina,Basidiomycota,OM441,Rhodotorula_graminis.fasta.gz
+Rhodotorula_graminis_Y2474,Rhodotorula graminis,NRRL Y-2474,Rhodotorula_graminis_Y2474.fq.gz,,Pucciniomycotina,Basidiomycota,OM441,Rhodotorula_graminis.fastq.gz
 Rhodotorula_mucilaginosa_Y2510,Rhodotorula mucilaginosa,NRRL Y-2510,Rhodotorula_mucilaginosa_Y2510.fq.gz,,Pucciniomycotina,Basidiomycota,OM429,Rhodotorula_mucilaginosa_R?.fq.gz
 Rhodotorula_sphaerocarpa_Y7192,Rhodotorula sphaerocarpa,NRRL Y-7192,Rhodotorula_sphaerocarpa_Y7192.fq.gz,,Pucciniomycotina,Basidiomycota,OM440,
 Rhodotorula_diobovata_Y7196,Rhodotorula diobovata,NRRL Y-7196,Rhodotorula_diobovata_Y7196.fq.gz,,Pucciniomycotina,Basidiomycota,OM446,
 Rhodotorula_dairenensis_Y2504,Rhodotorula dairenensis,NRRL Y-2504,Rhodotorula_dairenensis_Y2504.fq.gz,,Pucciniomycotina,Basidiomycota,OM447,
 Rhodotorula_paludigena_Y12923,Rhodotorula paludigena,NRRL Y-12923,Rhodotorula_paludigena_Y12923.fq.gz,,Pucciniomycotina,Basidiomycota,OM448,
-Rhodotorula_araucariae_Y17376,Rhodotorula araucariae,NRRL Y-17376,Rhodotorula_araucariae_Y17376.fq.gz,,Pucciniomycotina,Basidiomycota,OM449,
+Rhodotorula_araucariae_Y17376,Rhodotorula araucariae,NRRL Y-17376,Rhodotorula_araucariae_Y17376.fq.gz,ISQ0044635_S160,Pucciniomycotina,Basidiomycota,OM449,
