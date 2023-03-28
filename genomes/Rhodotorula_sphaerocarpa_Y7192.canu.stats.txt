@@ -1,12 +1,15 @@
 Assembly statistics for: genomes/Rhodotorula_sphaerocarpa_Y7192.canu.fasta
-   CONTIG COUNT  =  45
-   TOTAL LENGTH  =  17612378
-            MIN  =  18364
-            MAX  =  1342127
-         MEDIAN  =  227498
-           MEAN  =  391386.18
-            L50  =  9
-            N50  =  751848
-            L90  =  23
-            N90  =  227498
-            GC%  =  63.34
+   CONTIG COUNT  =  25
+   TOTAL LENGTH  =  17902947
+            MIN  =  13003
+            MAX  =  1939288
+         MEDIAN  =  752058
+           MEAN  =  716117.88
+            L50  =  7
+            N50  =  1154350
+            L90  =  15
+            N90  =  604757
+            GC%  =  63.20
+  T2T SCAFFOLDS  =  15
+   TELOMERE FWD  =  16
+   TELOMERE REV  =  17

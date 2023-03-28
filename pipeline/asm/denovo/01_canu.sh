@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH -p short --out logs/launch_canu.%a.log -a 1-5
+#SBATCH -p short --out logs/launch_canu.%a.log -a 1-8
 module load canu
 IN=input/nanopore
 OUT=asm/canu

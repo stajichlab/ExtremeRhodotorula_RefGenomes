@@ -51,19 +51,19 @@
         "busco": "5.4.3"
     },
     "results": {
-        "one_line_summary": "C:97.2%[S:97.1%,D:0.1%],F:0.5%,M:2.3%,n:1764",
-        "Complete": 97.2,
-        "Single copy": 97.1,
+        "one_line_summary": "C:97.3%[S:97.2%,D:0.1%],F:0.4%,M:2.3%,n:1764",
+        "Complete": 97.3,
+        "Single copy": 97.2,
         "Multi copy": 0.1,
-        "Fragmented": 0.5,
+        "Fragmented": 0.4,
         "Missing": 2.3,
         "n_markers": 1764,
         "domain": "eukaryota",
-        "Number of scaffolds": "32",
-        "Number of contigs": "32",
-        "Total length": "20358004",
+        "Number of scaffolds": "30",
+        "Number of contigs": "30",
+        "Total length": "20380117",
         "Percent gaps": "0.000%",
-        "Scaffold N50": "1286642",
-        "Contigs N50": "1286642"
+        "Scaffold N50": "1286621",
+        "Contigs N50": "1286621"
     }
 }

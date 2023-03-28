@@ -10,3 +10,6 @@ Assembly statistics for: genomes/Rhodotorula_diobovata_Y7196.canu.fasta
             L90  =  15
             N90  =  860266
             GC%  =  66.63
+  T2T SCAFFOLDS  =  15
+   TELOMERE FWD  =  15
+   TELOMERE REV  =  17

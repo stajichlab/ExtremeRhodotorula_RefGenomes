@@ -38,20 +38,20 @@ do
     if [ -z $RNASEQ ]; then
 	echo "No RNASeq for training, skipping $BASE"
     else
-	FILES=( $(ls $RNADIR/${RNASEQ}) )
-	ARGS=""
-	if [ ${#FILES[@]} == 1 ]; then
-	    ARGS="--single ${FILES[0]}"
-	elif [ ${#FILES[@]} == 1 ]; then
-	    ARGS="--left ${FILES[0]} --right ${FILES[1]}"
+	# this is dynamically checking for files that are paired but if not paired we use the --single option
+	LEFT=$(ls $RNADIR/${RNASEQ} | sed -n 1p)
+	RIGHT=$(ls $RNADIR/${RNASEQ} | sed -n 2p)
+	if [[ ! -z $LEFT && ! -z $RIGHT ]]; then
+		# paired end data
+		funannotate train -i $GENOME --cpus $CPUS --memory $MEM  --species "$SPECIES" --strain $STRAIN  -o $OUTDIR/$BASE --jaccard_clip --max_intronlen 1000 \
+			--left $LEFT --right $RIGHT
+	elif [ ! -z $LEFT ]; then
+		# unpaired - single end only
+		funannotate train -i $GENOME --cpus $CPUS --memory $MEM  --species "$SPECIES" --strain $STRAIN  -o $OUTDIR/$BASE --jaccard_clip  --max_intronlen 1000 \
+			--single $LEFT
 	else
 	    echo "No RNASeq files found in '$RNADIR' for '$RNASEQ' - check RNASEQ column in $SAMPLES"
 	    exit
 	fi
-
-	funannotate train -i $GENOME --cpus $CPUS --memory $MEM \
-		    --species "$SPECIES" --strain $STRAIN \
-		    -o $OUTDIR/$BASE --jaccard_clip $ARGS \
-		    --max_intronlen 1000
     fi
 done

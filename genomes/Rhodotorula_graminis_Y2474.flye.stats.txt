@@ -10,3 +10,6 @@ Assembly statistics for: genomes/Rhodotorula_graminis_Y2474.flye.fasta
             L90  =  15
             N90  =  771867
             GC%  =  67.61
+  T2T SCAFFOLDS  =  4
+   TELOMERE FWD  =  13
+   TELOMERE REV  =  9

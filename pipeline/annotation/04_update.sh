@@ -2,11 +2,11 @@
 #SBATCH --nodes 1 -c 24 -n 1 --mem 64G -p batch --out logs/update.%a.log
 
 module load funannotate
+export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 
 CPUS=$SLURM_CPUS_ON_NODE
 module load funannotate
 RNADIR=lib/RNASeq
-
 
 if [ ! $CPUS ]; then
     CPUS=2

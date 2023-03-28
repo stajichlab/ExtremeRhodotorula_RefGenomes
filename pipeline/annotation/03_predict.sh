@@ -1,9 +1,9 @@
 #!/bin/bash -l
-#SBATCH --nodes 1 --ntasks 16 --mem 64G -p intel --out logs/predict.%a.log -a 1
+#SBATCH --nodes 1 --ntasks 16 --mem 64G -p intel --out logs/predict.%a.log -a 1 -p batch
 
 module load funannotate
 module load workspace/scratch
-
+export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 GMFOLDER=`dirname $(which gmhmme3)`
 #genemark key is needed
 if [ ! -f ~/.gm_key ]; then
@@ -19,7 +19,8 @@ INDIR=final_genomes
 OUTDIR=annotation
 SAMPLES=samples.csv
 BUSCODB=basidiomycota_odb10
-BUSCOSEED=ustilago
+EVIDENCE=lib/Rhodotorula.proteins.fasta
+BUSCOSEED=rhodotorula_graminis_nrrl_y-2474
 N=${SLURM_ARRAY_TASK_ID}
 
 if [ -z $N ]; then
@@ -42,6 +43,7 @@ do
     GENOME=$INDIR/$BASE.masked.fasta
     funannotate predict --keep_no_stops --SeqCenter UCR -i $GENOME \
 		-o $OUTDIR/$BASE -s "$SPECIES" --strain "$STRAIN"  --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
-		--cpus $CPU --min_training_models 50 --max_intronlen 1000 --name $LOCUS \
-		--min_protlen 30 --tmpdir $SCRATCH  --busco_db $BUSCODB --busco_seed_species $BUSCOSEED
+		--cpus $CPU --min_training_models 50 --max_intronlen 1000 --name $LOCUS --optimize_augustus \
+		--min_protlen 30 --tmpdir $SCRATCH  --busco_db $BUSCODB --busco_seed_species $BUSCOSEED \
+		--protein_evidence $FUNANNOTATE_DB/uniprot_sprot.fasta $EVIDENCE 
 done

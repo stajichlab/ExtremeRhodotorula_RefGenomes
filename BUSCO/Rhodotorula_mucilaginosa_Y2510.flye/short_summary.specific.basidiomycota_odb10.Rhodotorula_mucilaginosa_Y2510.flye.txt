@@ -6,18 +6,18 @@
 
 	***** Results: *****
 
-	C:96.5%[S:96.4%,D:0.1%],F:0.7%,M:2.8%,n:1764	   
-	1702	Complete BUSCOs (C)			   
-	1700	Complete and single-copy BUSCOs (S)	   
+	C:96.6%[S:96.5%,D:0.1%],F:0.6%,M:2.8%,n:1764	   
+	1705	Complete BUSCOs (C)			   
+	1703	Complete and single-copy BUSCOs (S)	   
 	2	Complete and duplicated BUSCOs (D)	   
-	12	Fragmented BUSCOs (F)			   
-	50	Missing BUSCOs (M)			   
+	11	Fragmented BUSCOs (F)			   
+	48	Missing BUSCOs (M)			   
 	1764	Total BUSCO groups searched		   
 
 Assembly Statistics:
-	32	Number of scaffolds
-	32	Number of contigs
-	20348268	Total length
+	30	Number of scaffolds
+	30	Number of contigs
+	20372661	Total length
 	0.000%	Percent gaps
 	1 MB	Scaffold N50
 	1 MB	Contigs N50

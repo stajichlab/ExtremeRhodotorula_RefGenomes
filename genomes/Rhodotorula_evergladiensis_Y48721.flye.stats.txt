@@ -10,3 +10,6 @@ Assembly statistics for: genomes/Rhodotorula_evergladiensis_Y48721.flye.fasta
             L90  =  17
             N90  =  516309
             GC%  =  59.90
+  T2T SCAFFOLDS  =  9
+   TELOMERE FWD  =  9
+   TELOMERE REV  =  21

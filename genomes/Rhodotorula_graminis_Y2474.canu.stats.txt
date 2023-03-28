@@ -10,3 +10,6 @@ Assembly statistics for: genomes/Rhodotorula_graminis_Y2474.canu.fasta
             L90  =  20
             N90  =  413569
             GC%  =  67.15
+  T2T SCAFFOLDS  =  9
+   TELOMERE FWD  =  20
+   TELOMERE REV  =  13
