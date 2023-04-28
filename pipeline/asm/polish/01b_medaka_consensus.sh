@@ -25,7 +25,7 @@ SAMPLES=samples.csv
 
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-    for type in canu flye
+    for type in canu flye raven
     do
 	DRAFT=$OUTDIR/$BASE/$type.fasta
 	HDF=$OUTDIR/$BASE/$type.hdf

@@ -34,9 +34,11 @@ do
     if [ ! -f $OUTDIR/$BASE/flye.fasta ]; then
     	rsync -av $INDIR/flye/$BASE/assembly.fasta $OUTDIR/$BASE/flye.fasta
     fi
-
+    if [ ! -f $OUTDIR/$BASE/raven.fasta ]; then
+	    rsync -av $INDIR/raven/$BASE.scaffolds.fasta $OUTDIR/$BASE/raven.fasta
+    fi
     READS=$READDIR/$NANOPORE
-    for type in canu flye
+    for type in canu flye raven
     do
 	DRAFT=$OUTDIR/$BASE/$type.fasta
 	BAM=$OUTDIR/$BASE/$type.calls_to_draft.bam
