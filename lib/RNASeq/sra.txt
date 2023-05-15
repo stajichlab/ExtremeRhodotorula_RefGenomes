@@ -11,3 +11,51 @@ Rhodotorula mucilaginosa,SRR10525677
 Rhodotorula mucilaginosa,SRR5363167
 Rhodotorula mucilaginosa,SRR5565087
 Rhodotorula mucilaginosa,SRR5565088
+Rhodotorula toruloides,SRR24498161
+Rhodotorula toruloides,SRR24498162
+Rhodotorula toruloides,SRR24498163
+Rhodotorula toruloides,SRR24498164
+Rhodotorula toruloides,SRR24498165
+Rhodotorula toruloides,SRR24498166
+Rhodotorula toruloides,SRR21684368
+Rhodotorula toruloides,SRR21684369
+Rhodotorula toruloides,SRR21684372
+Rhodotorula kratochvilovae,SRR23561607
+Rhodotorula kratochvilovae,SRR23561608
+Rhodotorula kratochvilovae,SRR23561609
+Rhodotorula kratochvilovae,SRR23561610
+Rhodotorula kratochvilovae,SRR23561611
+Rhodotorula kratochvilovae,SRR23561612
+Rhodotorula kratochvilovae,SRR14865761
+Rhodotorula kratochvilovae,SRR14865763
+Rhodotorula kratochvilovae,SRR14865759
+Rhodotorula kratochvilovae,SRR14865760
+Rhodotorula kratochvilovae,SRR14865762
+Rhodotorula kratochvilovae,SRR14865764
+Rhodotorula glutinis,SRR20277935
+Rhodotorula glutinis,SRR20277936
+Rhodotorula sp. LM-2,SRR18392902
+Rhodotorula glutinis,SRR14455376
+Rhodotorula glutinis,SRR14455377
+Rhodotorula glutinis,SRR14455378
+Rhodotorula glutinis,SRR14425892
+Rhodotorula glutinis,SRR14425893
+Rhodotorula glutinis,SRR14425894
+Rhodotorula glutinis,SRR14339753
+Rhodotorula glutinis,SRR14339754
+Rhodotorula glutinis,SRR14339755
+Rhodotorula sp. JG-1b,SRR11784201
+Rhodotorula sp. JG-1b,SRR11784200
+Rhodotorula sp. JG-1b,SRR11784197
+Rhodotorula sp. JG-1b,SRR11784196
+Rhodotorula sp. JG-1b,SRR11784195
+Rhodotorula sp. JG-1b,SRR11784194
+Rhodotorula sp. USM-PSY62,SRR8653475
+Rhodotorula sp. USM-PSY62,SRR8653476
+Rhodotorula sp. USM-PSY62,SRR8653477
+Rhodotorula sp. USM-PSY62,SRR8653478
+Rhodotorula sp. USM-PSY62,SRR8653479
+Rhodotorula sp. USM-PSY62,SRR8653480
+Rhodotorula sp. USM-PSY62,SRR8653481
+Rhodotorula sp. USM-PSY62,SRR8653482
+
