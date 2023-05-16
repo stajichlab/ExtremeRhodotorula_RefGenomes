@@ -1,7 +1,7 @@
 NAME,SPECIES,STRAIN,NANOPORE,ILLUMINA,SUBPHYLUM,PHYLUM,LOCUS,RNASEQ
 Cystobasidium_sp._DBVPG10057,Cystobasidium sp.,DVPG 10057,,Cystobasidium_sp._DBVPG10057.fq.gz,Pucciniomycotina,Basidiomycota,DBVPG10057,
 Cystobasidium_sp._R3,Cystobasidium sp.,R3,,Cystobasidium_sp._R3.fq.gz,Pucciniomycotina,Basidiomycota,R3,
-Rhodotorula_evergladiensis_Y48721,Rhodotorula evergladiensis,NRRL Y-48721,Rhodotorula_evergladiensis_Y48721.fq.gz,,Pucciniomycotina,Basidiomycota,OM443,
+Rhodotorula_evergladiensis_DBVPG7922,Rhodotorula evergladiensis,DBVPG 7922,DBVPG_7922_S44_L001,Pucciniomycotina,Basidiomycota,DBVPG7922,
 Rhodotorula_graminis_Y2474,Rhodotorula graminis,NRRL Y-2474,Rhodotorula_graminis_Y2474.fq.gz,ISQ0044631_S88,Pucciniomycotina,Basidiomycota,OM441,Rhodotorula_graminis_single.fastq.gz
 Rhodotorula_mucilaginosa_Y2510,Rhodotorula mucilaginosa,NRRL Y-2510,Rhodotorula_mucilaginosa_Y2510.fq.gz,,Pucciniomycotina,Basidiomycota,OM429,Rhodotorula_mucilaginosa_R?.fastq.gz
 Rhodotorula_sphaerocarpa_Y7192,Rhodotorula sphaerocarpa,NRRL Y-7192,Rhodotorula_sphaerocarpa_Y7192.fq.gz,ISQ0044629_S52,Pucciniomycotina,Basidiomycota,OM440,
