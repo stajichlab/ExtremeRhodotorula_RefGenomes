@@ -26,8 +26,8 @@ mkdir -p $OUTDIR
 IFS=,
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-	unset IFS
-    for type in canu flye
+    unset IFS
+    for type in canu flye raven
     do
 		POLISHED=$INDIR/$BASE/$type.polished.fasta
 		mkdir -p $OUTDIR/$BASE

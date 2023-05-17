@@ -18,5 +18,5 @@ SAMPLES=samples.csv
 
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
-    canu -p ${BASE} -d $OUT/${BASE} genomeSize=20m -raw -nanopore $IN/$NANOPORE
+    canu -p ${BASE} -d $OUT/${BASE} genomeSize=20m -raw -nanopore $IN/$NANOPORE gridOptions="-p batch"
 done

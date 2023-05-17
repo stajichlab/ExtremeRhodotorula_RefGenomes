@@ -14,15 +14,16 @@ tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILL
 do
     rsync -a $INDIR/canu/$BASE/$BASE.contigs.fasta $OUTDIR/$BASE.canu.fasta
     rsync -a $INDIR/flye/$BASE/assembly.fasta $OUTDIR/$BASE.flye.fasta
+    rsync -a $INDIR/raven/$BASE.scaffolds.fasta $OUTDIR/$BASE.raven.fasta
     if [ -d $INDIR/NECAT/$BASE/$BASE/6-bridge_contigs ]; then
 	rsync -a $INDIR/NECAT/$BASE/$BASE/6-bridge_contigs/polished_contigs.fasta $OUTDIR/$BASE.necat.fasta
     fi
 
-    for type in canu flye 
+    for type in canu flye raven
     do
 	if [ -f  $INDIR/pilon/$BASE/$type.pilon.fasta ];  then
 		AAFTF sort -i $INDIR/pilon/$BASE/$type.pilon.fasta -o $OUTDIR/$BASE.$type.pilon.fasta
-		AAFTF assess -i $OUTDIR/$BASE.$type.pilon.sorted.fasta -r $OUTDIR/$BASE.$type.pilon.stats.txt
+		AAFTF assess -i $OUTDIR/$BASE.$type.pilon.fasta -r $OUTDIR/$BASE.$type.pilon.stats.txt
 	fi
 	STATS=$OUTDIR/$BASE.$type.stats.txt
 	QUERY=$OUTDIR/$BASE.$type.fasta
