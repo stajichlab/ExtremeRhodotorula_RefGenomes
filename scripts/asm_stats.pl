@@ -44,7 +44,8 @@ foreach my $file ( readdir(DIR) ) {
 
     if ( -d $telomere_report ) {
 	if ( $first ) {
-	    push @header, qw(Telomeres_Found TELOMERE_FWD TELOMERE_REV T2T_SCAFFOLDS);
+	    push @header, qw(Telomeres_Found);
+	    #TELOMERE_FWD TELOMERE_REV T2T_SCAFFOLDS);
 	}
 	my $telomerefile = File::Spec->catfile($telomere_report,sprintf("%s.telomere_report.txt",$stem));
   	if ( ! -f $telomerefile ) {
