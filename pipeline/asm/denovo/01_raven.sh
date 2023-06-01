@@ -27,6 +27,8 @@ tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILL
 do
     INFASTQ=$(realpath $IN/$NANOPORE)
     OUTSCAFFOLDS=$(realpath $OUT)/$BASE.scaffolds.fasta
-    pushd $SCRATCH
-    raven -t $CPU $INFASTQ > $OUTSCAFFOLDS
+    if [[ ! -f $OUTSCAFFOLDS || $INFASTQ -nt $OUTSCAFFOLDS ]]; then
+    	pushd $SCRATCH
+    	raven -t $CPU $INFASTQ > $OUTSCAFFOLDS
+    fi
 done

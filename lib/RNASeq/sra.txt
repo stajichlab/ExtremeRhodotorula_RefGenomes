@@ -58,4 +58,22 @@ Rhodotorula sp. USM-PSY62,SRR8653479
 Rhodotorula sp. USM-PSY62,SRR8653480
 Rhodotorula sp. USM-PSY62,SRR8653481
 Rhodotorula sp. USM-PSY62,SRR8653482
+Rhodotorula taiwanensis RS1,SRR5880539
+Rhodotorula taiwanensis RS1,SRR5880540
+Rhodotorula taiwanensis RS1,SRR5880541
+Rhodotorula taiwanensis RS1,SRR5880542
+Rhodotorula taiwanensis RS1,SRR5880543
+Rhodotorula taiwanensis RS1,SRR5880544
+Rhodotorula taiwanensis RS1,SRR5880545
+Rhodotorula taiwanensis RS1,SRR5880546
+Rhodotorula taiwanensis RS1,SRR5880547
+Rhodotorula taiwanensis RS1,SRR5880548
+Rhodotorula taiwanensis RS1,SRR5880549
+Rhodotorula taiwanensis RS1,SRR5880550
+
+
+
+
+
+
 

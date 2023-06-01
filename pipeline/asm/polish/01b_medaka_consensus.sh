@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH -N 1 -p gpu -n 1 -c 2 --mem 64gb --out logs/medaka_cons.%a.log  --gres=gpu:1 --time 2:00:00 -a 1-8
+#SBATCH -N 1 -p gpu -n 1 -c 2 --mem 64gb --out logs/medaka_cons.%a.log  --gres=gpu:1 --time 2:00:00 -a 1-11
 
 module load medaka/1.6-gpu
 module load workspace/scratch

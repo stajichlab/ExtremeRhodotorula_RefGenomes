@@ -15,48 +15,50 @@ with open(args.infile, "r",encoding="utf-8") as jsonin, open(args.outfile,"w",ne
     outcsvtbl = csv.writer(outcsv,dialect="unix",quoting=csv.QUOTE_MINIMAL)
     outcsvtbl.writerow(['ACCESSION','SPECIES','STRAIN','NCBI_TAXID','BIOPROJECT','ASM_LENGTH','N50','ASM_NAME'])
     rows = {}
-
-    for assembly in data["assemblies"]:
+    print(data.keys())
+    #for assembly in data["assemblies"]:
+    for assembly in data["reports"]:
         category = ''
+        print( assembly.keys() )
         if 'assembly_category' in assembly['assembly']:
-            category = assembly['assembly']['assembly_category']
+            category = assembly['assembly_category']
 
         if category != 'representative genome':
             continue
 
-        accession = assembly['assembly']['assembly_accession']
-        assembly_name= assembly['assembly']['display_name']
+        accession = assembly['current_accession']
+        assembly_name= assembly['display_name']
         assembly_name = re.sub(r',','',assembly_name)
         assembly_name = re.sub(r'[\(\)\/]','_',assembly_name)
         assembly_name = re.sub(r' _V','_V',assembly_name)
         #print(seen)
 
         bioprojects = set()
-        species = assembly['assembly']['org']["sci_name"]
+        species = assembly['org']["sci_name"]
         strain  = ""
-        if 'strain' in assembly['assembly']['org']:
-            strain  = assembly['assembly']['org']["strain"]
-        elif 'isolate' in  assembly['assembly']['org']:
-            strain  = assembly['assembly']['org']["isolate"]
+        if 'strain' in assembly['assembly_info']['org']:
+            strain  = assembly['assembly_info']['org']["strain"]
+        elif 'isolate' in  assembly['assembly_info']['org']:
+            strain  = assembly['assembly_info']['org']["isolate"]
         strain = re.sub(r',\s+',';',strain)
-        taxid   = assembly['assembly']['org']['tax_id']
+        taxid   = assembly['assembly_info']['org']['tax_id']
         rank = ""
-        if 'rank' in assembly['assembly']['org']:
-            rank    = assembly['assembly']['org']['rank']
+        if 'rank' in assembly['assembly_info']['org']:
+            rank    = assembly['assembly_info']['org']['rank']
             if rank == "STRAIN":
-                taxid = assembly['assembly']['org']['parent_tax_id']
+                taxid = assembly['assembly_info']['org']['parent_tax_id']
                 species = re.sub(' {}'.format(strain),'',species)
         elif species == "Fusarium vanettenii 77-13-4" or species == "Leptosphaeria biglobosa 'brassicae' group":
             taxid = assembly['assembly']['org']['parent_tax_id']
             species = re.sub(' {}'.format(strain),'',species)
         else:
             print("no rank for {}".format(species))
-        n50     = assembly['assembly']['contig_n50']
-        seqlength = assembly['assembly']['seq_length']
-        for bioproject in assembly['assembly']['bioproject_lineages']:
+        n50     = assembly['assembly_info']['contig_n50']
+        seqlength = assembly['assembly_info']['seq_length']
+        for bioproject in assembly['assembly_info']['bioproject_lineages']:
             for proj,dat in bioproject.items():
                 for acc in dat:
-                    bioprojects.add( acc["accession"])
+                    bioprojects.add( acc["accession_info"])
                 #{'bioprojects': [{'accession': 'PRJNA588476', 'title': 'Coniothyrium minitans project'}]}
         #print("accession is {} bioprojects={}".format(accession,bioprojects))
         if species in rows:

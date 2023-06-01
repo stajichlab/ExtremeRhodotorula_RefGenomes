@@ -1,12 +1,12 @@
 NAME,SPECIES,STRAIN,NANOPORE,ILLUMINA,SUBPHYLUM,PHYLUM,LOCUS,RNASEQ
 Cystobasidium_sp._DBVPG10075,Cystobasidium sp.,DVPG 10075,Cystobasidium_sp._DBVPG10075.fq.gz,DBVPG_10075_S1_L001,Pucciniomycotina,Basidiomycota,DBVPG10075,
 Cystobasidium_sp._R3,Cystobasidium sp.,R3,Cystobasidium_sp._R3.fq.gz,,Pucciniomycotina,Basidiomycota,R3,
-Rhodotorula_evergladiensis_DBVPG7922,Rhodotorula evergladiensis,DBVPG 7922,Rhodotorula_evergladiensis_DBVPG7922.fq.gz,DBVPG_7922_S44_L001,Pucciniomycotina,Basidiomycota,DBVPG7922,
+Rhodotorula_evergladensis_DBVPG7922,Rhodotorula evergladensis,DBVPG 7922,Rhodotorula_evergladensis_DBVPG7922.fq.gz,DBVPG_7922_S44_L001,Pucciniomycotina,Basidiomycota,DBVPG7922,
 Rhodotorula_graminis_Y2474,Rhodotorula graminis,NRRL Y-2474,Rhodotorula_graminis_Y2474.fq.gz,ISQ0044631_S88,Pucciniomycotina,Basidiomycota,OM441,Rhodotorula_graminis_single.fastq.gz
-Rhodotorula_mucilaginosa_Y2510,Rhodotorula mucilaginosa,NRRL Y-2510,Rhodotorula_mucilaginosa_Y2510.fq.gz,,Pucciniomycotina,Basidiomycota,OM429,Rhodotorula_mucilaginosa_R?.fastq.gz
+Rhodotorula_mucilaginosa_Y2510,Rhodotorula mucilaginosa,NRRL Y-2510,Rhodotorula_mucilaginosa_Y2510.fq.gz,Y-2510_S47_L001,Pucciniomycotina,Basidiomycota,OM429,Rhodotorula_mucilaginosa_R?.fastq.gz
 Rhodotorula_sphaerocarpa_Y7192,Rhodotorula sphaerocarpa,NRRL Y-7192,Rhodotorula_sphaerocarpa_Y7192.fq.gz,ISQ0044629_S52,Pucciniomycotina,Basidiomycota,OM440,
-Rhodotorula_diobovata_Y7196,Rhodotorula diobovata,NRRL Y-7196,Rhodotorula_diobovata_Y7196.fq.gz,,Pucciniomycotina,Basidiomycota,OM446,
+Rhodotorula_diobovata_Y7196,Rhodotorula diobovata,NRRL Y-7196,Rhodotorula_diobovata_Y7196.fq.gz,Y-7196_S48_L001,Pucciniomycotina,Basidiomycota,OM446,
 Rhodotorula_dairenensis_Y2504,Rhodotorula dairenensis,NRRL Y-2504,Rhodotorula_dairenensis_Y2504.fq.gz,ISQ0044633_S124,Pucciniomycotina,Basidiomycota,OM447,
-Rhodotorula_paludigena_Y12923,Rhodotorula paludigena,NRRL Y-12923,Rhodotorula_paludigena_Y12923.fq.gz,,Pucciniomycotina,Basidiomycota,OM448,
+Rhodotorula_paludigena_Y12923,Rhodotorula paludigena,NRRL Y-12923,Rhodotorula_paludigena_Y12923.fq.gz,Y-12923_S46_L001,Pucciniomycotina,Basidiomycota,OM448,
 Rhodotorula_araucariae_Y17376,Rhodotorula araucariae,NRRL Y-17376,Rhodotorula_araucariae_Y17376.fq.gz,ISQ0044635_S160,Pucciniomycotina,Basidiomycota,OM449,
 Rhodotorula_sp._DBVPG7947,Rhodotorula sp.,DBVPG 7947,Rhodotorula_sp._DBVPG7947.fq.gz,DBVPG_7947_S45_L001,Pucciniomycotina,Basidiomycota,DBVPG7947,
