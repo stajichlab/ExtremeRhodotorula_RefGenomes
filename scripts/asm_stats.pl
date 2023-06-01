@@ -55,8 +55,8 @@ foreach my $file ( readdir(DIR) ) {
 	    open(my $fh => $telomerefile) || die $!;
 	    my %contigs_with_tel;
 	    while(<$fh>) {
-		if( /^(.+)\s+(forward|reverse)\s+(\S+)/i ){
-		    $contigs_with_tel{$1}->{$2} = $3;
+		if( /^(\S+)\s+(.*\s+)?(forward|reverse)\s+(\S+)/i ){
+		    $contigs_with_tel{$1}->{$3} = $4;
 		} elsif (/^Telomeres found:\s+(\d+)\s+\((\S+)\s+forward,\s+(\S+)\s+reverse\)/ ) {
 		    $stats{$stem}->{'Telomeres_Found'} = $1;
 		    $stats{$stem}->{'Telomeres_Fwd'} = $2;
