@@ -4,6 +4,10 @@
 module load funannotate
 module load workspace/scratch
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
+#export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.5/config)
+
+
+which augustus
 GMFOLDER=`dirname $(which gmhmme3)`
 #genemark key is needed
 if [ ! -f ~/.gm_key ]; then
@@ -19,7 +23,7 @@ INDIR=final_genomes
 OUTDIR=annotation
 SAMPLES=samples.csv
 BUSCODB=basidiomycota_odb10
-EVIDENCE=lib/Rhodotorula.proteins.fasta
+EVIDENCE=$(realpath lib/Rhodotorula.proteins.fasta)
 BUSCOSEED=rhodotorula_graminis_nrrl_y-2474
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -42,8 +46,10 @@ tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILL
 do
     GENOME=$INDIR/$BASE.masked.fasta
     funannotate predict --keep_no_stops --SeqCenter UCR -i $GENOME \
-		-o $OUTDIR/$BASE -s "$SPECIES" --strain "$STRAIN"  --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
+		-o $OUTDIR/$BASE -s "$SPECIES" --strain "$STRAIN"  \
 		--cpus $CPU --min_training_models 50 --max_intronlen 1000 --name $LOCUS --optimize_augustus \
 		--min_protlen 30 --tmpdir $SCRATCH  --busco_db $BUSCODB --busco_seed_species $BUSCOSEED \
 		--protein_evidence $FUNANNOTATE_DB/uniprot_sprot.fasta $EVIDENCE 
+		#--AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
+
 done

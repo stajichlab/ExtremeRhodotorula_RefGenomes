@@ -2,14 +2,9 @@
 #SBATCH --nodes 1 -c 24 -n 1 --mem 64G -p batch --out logs/annotate.%a.log
 # note this doesn't need that much memory EXCEPT for the XML -> tsv parsing that happens when you provided an interpro XML file
 
-#!/bin/bash -l
-#SBATCH --nodes 1 --ntasks 24 --mem 128G --out logs/train.%a.log -J trainRhod --time 96:00:00
-
-MEM=128G
+MEM=64G
 module load funannotate
 
-#export PASAHOME=`dirname $(which Launch_PASA_pipeline.pl)`
-RNADIR=lib/RNASeq
 CPUS=$SLURM_CPUS_ON_NODE
 
 if [ ! $CPUS ]; then
@@ -40,7 +35,6 @@ tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILL
 do
     name=$BASE
     GENOME=$INDIR/$BASE.masked.fasta
-    IPRSCAN=
     funannotate annotate -i $OUTDIR/$BASE --cpus $CPUS  \
 		--species "$SPECIES" --strain $STRAIN --sbt $SBTTEMPLATE/$BASE.sbt \
 		-o $OUTDIR/$BASE --busco_db $BUSCODB --rename $LOCUS

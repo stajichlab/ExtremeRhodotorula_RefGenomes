@@ -36,6 +36,7 @@ do
     name=$BASE
     mkdir -p $MASKDIR/$BASE
     GENOME=$(realpath $INDIR)/$BASE.sorted.fasta
+    FINAL=$(realpath $INDIR)/$BASE.masked.fasta
     if [ ! -s $MASKDIR/$BASE/$BASE.sorted.fasta.masked ]; then
 	LIBRARY=$RMLIBFOLDER/$BASE.repeatmodeler.lib
 	COMBOLIB=$RMLIBFOLDER/$BASE.combined.lib
@@ -54,8 +55,10 @@ do
 	   module load RepeatMasker
 	   RepeatMasker -e ncbi -xsmall -s -pa $CPU -lib $COMBOLIB -dir $MASKDIR/$BASE -gff $GENOME
 	fi
-    	rsync -a $MASKDIR/$BASE/$(basename $GENOME).masked $INDIR/$BASE.masked.fasta
     else
 	echo "Skipping $BASE as masked file already exists"
+   fi
+   if [ ! -f $FINAL ]; then 
+   	rsync -a $MASKDIR/$BASE/$BASE.sorted.fasta.masked $FINAL
    fi
 done
