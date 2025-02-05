@@ -43,6 +43,7 @@ do
 	RIGHT=$(ls $RNADIR/${RNASEQ} | sed -n 2p)
 	if [[ ! -z $LEFT && ! -z $RIGHT ]]; then
 		# paired end data
+		echo "runing with --left $LEFT --right $RIGHT"
 		funannotate train -i $GENOME --cpus $CPUS --memory $MEM  --species "$SPECIES" --strain $STRAIN  -o $OUTDIR/$BASE --jaccard_clip --max_intronlen 1000 \
 			--left $LEFT --right $RIGHT
 	elif [ ! -z $LEFT ]; then

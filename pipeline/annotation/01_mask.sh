@@ -1,11 +1,15 @@
 #!/usr/bin/bash -l
-#SBATCH -p batch -N 1 -c 16 --mem 24gb --out logs/repeatmask.%a.log
+#SBATCH -N 1 -c 24 --mem 24gb --out logs/repeatmask.%a.log
 
 module load RepeatModeler
 
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
     CPU=$SLURM_CPUS_ON_NODE
+fi
+THREADS=$(expr $CPU / 4)
+if [ $THREADS -eq 0 ]; then
+	THREADS=1
 fi
 
 INDIR=final_genomes
@@ -43,7 +47,7 @@ do
 	if [ ! -f $LIBRARY ]; then
 		pushd $MASKDIR/$BASE
 		BuildDatabase -name $BASE $GENOME
-		RepeatModeler -pa $CPU -database $BASE -LTRStruct
+		RepeatModeler -threads $THREADS -database $BASE -LTRStruct
 		rsync -a RM_*/consensi.fa.classified $LIBRARY
 		rsync -a RM_*/families-classified.stk $RMLIBFOLDER/$BASE.repeatmodeler.stk
 		popd

@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH -p intel -N 1 -n 24 --mem 96gb --out logs/pilon.%a.log --array 1-12
+#SBATCH -p intel -N 1 -n 24 --mem 96gb --out logs/pilon.%a.log
 
 module load AAFTF
 MEM=96
@@ -27,7 +27,7 @@ IFS=,
 tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ
 do
     unset IFS
-    for type in canu flye raven
+    for type in raven
     do
 		POLISHED=$INDIR/$BASE/$type.polished.fasta
 		mkdir -p $OUTDIR/$BASE
@@ -43,7 +43,7 @@ do
 				echo "cannot find LEFT ($LEFT) for ILLUMINA: ${ILLUMINA}"
 				exit
 			fi
-			AAFTF pilon -l $LEFT -r $RIGHT -it 5 -i $POLISHED -o $PILON -c $CPU --memory $MEM
+			AAFTF pilon -l $LEFT -r $RIGHT -it 5 -v -i $POLISHED -o $PILON -c $CPU --memory $MEM
 		fi
     done
 done
