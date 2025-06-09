@@ -1,0 +1,28 @@
+## agp-version 2.1
+# AGP created by RagTag v2.1.0
+CP137864.1_RagTag	1	2175785	1	W	scaffold_1	1	2175785	+
+CP137865.1_RagTag	1	1611863	1	W	scaffold_2	1	1611863	+
+CP137866.1_RagTag	1	811507	1	W	scaffold_13	1	811507	-
+CP137866.1_RagTag	811508	811607	2	U	100	scaffold	yes	align_genus
+CP137866.1_RagTag	811608	1576494	3	W	scaffold_14	1	764887	-
+CP137867.1_RagTag	1	1471132	1	W	scaffold_3	1	1471132	-
+CP137868.1_RagTag	1	955579	1	W	scaffold_11	1	955579	+
+CP137869.1_RagTag	1	1468900	1	W	scaffold_4	1	1468900	+
+CP137870.1_RagTag	1	1396382	1	W	scaffold_5	1	1396382	-
+CP137871.1_RagTag	1	1286126	1	W	scaffold_6	1	1286126	-
+CP137872.1_RagTag	1	1247722	1	W	scaffold_8	1	1247722	+
+CP137873.1_RagTag	1	1034445	1	W	scaffold_9	1	1034445	-
+CP137874.1_RagTag	1	642743	1	W	scaffold_18	1	642743	+
+CP137874.1_RagTag	642744	642843	2	U	100	scaffold	yes	align_genus
+CP137874.1_RagTag	642844	921842	3	W	scaffold_19	1	278999	-
+CP137875.1_RagTag	1	827188	1	W	scaffold_12	1	827188	-
+CP137876.1_RagTag	1	105456	1	W	scaffold_20	1	105456	-
+CP137876.1_RagTag	105457	105556	2	U	100	scaffold	yes	align_genus
+CP137876.1_RagTag	105557	1371261	3	W	scaffold_7	1	1265705	-
+CP137877.1_RagTag	1	699649	1	W	scaffold_15	1	699649	+
+CP137878.1_RagTag	1	654850	1	W	scaffold_17	1	654850	-
+CP137879.1_RagTag	1	665637	1	W	scaffold_16	1	665637	-
+CP137880.1_RagTag	1	987275	1	W	scaffold_10	1	987275	-
+CP137882.1_RagTag	1	87937	1	W	scaffold_21	1	87937	+
+scaffold_22	1	56127	1	W	scaffold_22	1	56127	+
+scaffold_23	1	53108	1	W	scaffold_23	1	53108	+
