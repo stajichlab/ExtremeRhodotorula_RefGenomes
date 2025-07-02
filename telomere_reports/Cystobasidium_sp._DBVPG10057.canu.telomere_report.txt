@@ -1,0 +1,3 @@
+tig00000125 len=3995 reads=5 class=contig suggestRepeat=no suggestBubble=no suggestCircular=no trim=0-3995	forward	AACCCTAACCCTAACCCTAACCCTAACCTAACCCTAACCCTCGCGCAGTGAGCCATCTGGATACTATCCACGTCCAGACGCCTGTGCCGAGTACACACAG
+
+Telomeres found: 1 (1 forward, 0 reverse)
